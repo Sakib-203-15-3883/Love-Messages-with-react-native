@@ -1,12 +1,13 @@
 // Navigation.js
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Provider as PaperProvider } from 'react-native-paper';
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {Provider as PaperProvider} from 'react-native-paper';
 
 import HomeScreen from './screens/HomeScreen';
-import ErrorScreen from './screens/ErrorScreen';
+
 import AboutScreen from './screens/AboutScreen';
+import Plan1 from './screens/Plan1';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,7 +17,8 @@ const Navigation = () => {
       <NavigationContainer>
         <Tab.Navigator>
           <Tab.Screen name="Home" component={HomeScreen} />
-          <Tab.Screen name="Services" component={ErrorScreen} />
+
+          <Tab.Screen name=" random girls" component={Plan1} />
           <Tab.Screen name="About" component={AboutScreen} />
         </Tab.Navigator>
       </NavigationContainer>

@@ -4,7 +4,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const HomeScreen = () => {
   return (
-    <LinearGradient colors={['#FDFFF4', '#BBC1AD']} style={styles.container}>
+    <LinearGradient colors={['#4e54c8', '#8f94fb']} style={styles.container}>
       <View style={styles.container}>
         <Text style={styles.text}>Welcome to the Home Screen!</Text>
       </View>
