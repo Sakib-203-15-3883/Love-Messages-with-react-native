@@ -1,27 +1,41 @@
+// HomeScreen.js
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
+  const goToPlan1 = () => {
+    navigation.navigate('Plan1');
+  };
+
   return (
-    <LinearGradient colors={['#4e54c8', '#8f94fb']} style={styles.container}>
-      <View style={styles.container}>
-        <Text style={styles.text}>Welcome to the Home Screen!</Text>
-      </View>
-    </LinearGradient>
+    <View style={styles.container}>
+      <Text style={styles.title}>Welcome to the Home Screen!</Text>
+      <TouchableOpacity style={styles.button} onPress={goToPlan1}>
+        <Text style={styles.buttonText}>Go to Plan1</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
   },
-
-  text: {
-    color: 'black',
-    fontSize: 28,
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  button: {
+    backgroundColor: '#4e54c8',
+    padding: 10,
+    borderRadius: 5,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 18,
   },
 });
 
